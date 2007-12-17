@@ -14,7 +14,6 @@ Source:		http://search.cpan.org/CPAN/authors/id/G/GI/GIRAFFED/%{module}-%{versio
 Patch0: 	Curses-1.15-use-ncursesw.patch
 BuildRequires:	perl-devel
 BuildRequires:	libncursesw-devel
-Buildroot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Curses is the interface between Perl and your system's curses(3) library. 
