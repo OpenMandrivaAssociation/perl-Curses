@@ -1,7 +1,7 @@
 %define module	Curses
 %define name	perl-%{module}
-%define version 1.15
-%define release %mkrel 2
+%define version 1.20
+%define release %mkrel 1
 
 Name:		%{name}
 Version:	%{version}
@@ -10,22 +10,19 @@ Summary:	Perl module for character screen handling and windowing
 License:	GPL
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}/
-Source:		http://search.cpan.org/CPAN/authors/id/G/GI/GIRAFFED/%{module}-%{version}.tar.bz2
-Patch0: 	Curses-1.15-use-ncursesw.patch
+Source:		http://search.cpan.org/CPAN/authors/id/G/GI/GIRAFFED/%{module}-%{version}.tgz
 BuildRequires:	perl-devel
 BuildRequires:	libncursesw-devel
 
 %description
 Curses is the interface between Perl and your system's curses(3) library. 
 
-
 %prep
 %setup -q -n %{module}-%{version}
-%patch0 -p1
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" %{__perl} Makefile.PL INSTALLDIRS=vendor
-%make
+%{__perl} Makefile.PL INSTALLDIRS=vendor
+%make CFLAGS="%{optflags}"
 chmod 644 Artistic Copying INSTALL README
 
 %check
