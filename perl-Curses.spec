@@ -13,6 +13,7 @@ URL:		http://search.cpan.org/dist/%{module}/
 Source:		http://search.cpan.org/CPAN/authors/id/G/GI/GIRAFFED/%{module}-%{version}.tgz
 BuildRequires:	perl-devel
 BuildRequires:	libncursesw-devel
+Buildroot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Curses is the interface between Perl and your system's curses(3) library. 
