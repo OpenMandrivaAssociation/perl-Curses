@@ -1,25 +1,26 @@
-%define module	Curses
-%define name	perl-%{module}
-%define version 1.27
-%define release %mkrel 1
+%define upstream_name	 Curses
+%define upstream_version 1.28
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Perl module for character screen handling and windowing
 License:	GPL
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}/
-Source:		http://search.cpan.org/CPAN/authors/id/G/GI/GIRAFFED/%{module}-%{version}.tgz
-BuildRequires:	perl-devel
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	http://search.cpan.org/CPAN/authors/id/G/GI/GIRAFFED/%{upstream_name}-%{upstream_version}.tgz
+
 BuildRequires:	libncursesw-devel
-Buildroot:	%{_tmppath}/%{name}-%{version}
+BuildRequires:	perl-devel
+
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Curses is the interface between Perl and your system's curses(3) library. 
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -27,7 +28,7 @@ Curses is the interface between Perl and your system's curses(3) library.
 chmod 644 Artistic Copying INSTALL README
 
 %check
-make test
+%make test
 
 %install
 rm -rf %{buildroot}
@@ -42,5 +43,3 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/auto/Curses
 %{perl_vendorarch}/Curses*
 %{_mandir}/*/*
-
-
