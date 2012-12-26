@@ -1,15 +1,15 @@
-%define upstream_name	 Curses
-%define upstream_version 1.28
+%define	modname	Curses
+%define	modver	1.28
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    9
+Name:		perl-%{modname}
+Version:	%{perl_convert_version %{modver}}
+Release:	11
 
 Summary:	Perl module for character screen handling and windowing
 License:	GPL
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://search.cpan.org/CPAN/authors/id/G/GI/GIRAFFED/%{upstream_name}-%{upstream_version}.tgz
+Url:		http://search.cpan.org/dist/%{modname}/
+Source0:	http://search.cpan.org/CPAN/authors/id/G/GI/GIRAFFED/%{modname}-%{modver}.tgz
 
 BuildRequires:	pkgconfig(ncursesw)
 BuildRequires:	perl-devel
@@ -18,12 +18,12 @@ BuildRequires:	perl-devel
 Curses is the interface between Perl and your system's curses(3) library. 
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{modname}-%{modver}
+find -type f | xargs chmod o+r
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
-%make CFLAGS="%{optflags}"
-chmod 644 Artistic Copying INSTALL README
+perl Makefile.PL INSTALLDIRS=vendor
+%make
 
 %check
 %make test
@@ -32,13 +32,16 @@ chmod 644 Artistic Copying INSTALL README
 %makeinstall_std
 
 %files
-%doc Artistic Copying INSTALL README
+%doc Artistic README
 %{perl_vendorarch}/auto/Curses
 %{perl_vendorarch}/Curses*
 %{_mandir}/*/*
 
-
 %changelog
+* Wed Dec 26 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 1.280.0-11
+- rebuild for new perl-5.16.2
+- cleanups
+
 * Sun Jan 22 2012 Oden Eriksson <oeriksson@mandriva.com> 1.280.0-8mdv2012.0
 + Revision: 765140
 - rebuilt for perl-5.14.2
