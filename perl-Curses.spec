@@ -3,7 +3,7 @@
 
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
-Release:	12
+Release:	13
 
 Summary:	Perl module for character screen handling and windowing
 License:	GPL
