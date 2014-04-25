@@ -3,6 +3,7 @@
 
 Summary:	Perl module for character screen handling and windowing
 
+
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
 Release:	1
@@ -35,5 +36,6 @@ perl Makefile.PL INSTALLDIRS=vendor
 %{perl_vendorarch}/auto/Curses
 %{perl_vendorarch}/Curses*
 %{_mandir}/man3/*
+
 
 
