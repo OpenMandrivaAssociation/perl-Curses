@@ -1,7 +1,8 @@
 %define	modname	Curses
-%define modver 1.29
+%define modver 1.31
 
 Summary:	Perl module for character screen handling and windowing
+
 
 
 Name:		perl-%{modname}
@@ -36,6 +37,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 %{perl_vendorarch}/auto/Curses
 %{perl_vendorarch}/Curses*
 %{_mandir}/man3/*
+
 
 
 
