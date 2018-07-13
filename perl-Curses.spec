@@ -12,6 +12,7 @@ License:	GPLv2
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}/
 Source0:	http://search.cpan.org/CPAN/authors/id/G/GI/GIRAFFED/%{modname}-%{modver}.tgz
+BuildRequires:	perl(Test::More)
 BuildRequires:	pkgconfig(ncursesw)
 BuildRequires:	perl-devel
 
