@@ -7,7 +7,7 @@ Summary:	Perl module for character screen handling and windowing
 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	28
+Release:	29
 License:	GPLv2
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}/
