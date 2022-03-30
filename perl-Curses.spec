@@ -1,10 +1,10 @@
-%define	modname	Curses
+# Work around incomplete debug packages
+%global _empty_manifest_terminate_build 0
+
+%define modname Curses
 %define modver 1.32
 
 Summary:	Perl module for character screen handling and windowing
-
-
-
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
 Release:	29
@@ -20,21 +20,21 @@ BuildRequires:	perl-devel
 Curses is the interface between Perl and your system's curses(3) library. 
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -n %{modname}-%{modver} -p1
 find -type f | xargs chmod o+r
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
-%make
+%make_build
 
 %check
 %make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Artistic README
 %{perl_vendorarch}/auto/Curses
 %{perl_vendorarch}/Curses*
-%{_mandir}/man3/*
+%doc %{_mandir}/man3/*

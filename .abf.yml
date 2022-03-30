@@ -1,6 +1,2 @@
-removed_sources:
-  Curses-1.28.tgz: 1f778ad08f5e2668e2457a61fca9b5d2a1e30d7e
-  Curses-1.29.tgz: ebd091c7ffb7805c1eb59e6ed787e5b292c322a3
-  Curses-1.31.tgz: 9a70e8cd3d16c48fa8292608b8a5ca9e69976ded
 sources:
   Curses-1.32.tgz: 7b0872d4977c6ba3e0a585a6293c9dc8650bede1
