@@ -3,7 +3,7 @@
 Summary:	Perl module for character screen handling and windowing
 Name:		perl-%{module}
 Version:	1.41
-Release:	30
+Release:	1
 License:	GPLv2
 Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{module}/
