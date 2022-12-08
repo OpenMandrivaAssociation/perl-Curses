@@ -5,7 +5,7 @@
 
 Summary:	Perl module for character screen handling and windowing
 Name:		perl-%{module}
-Version:	1.41
+Version:	1.43
 Release:	1
 License:	GPLv2
 Group:		Development/Perl
