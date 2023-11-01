@@ -6,10 +6,10 @@
 Summary:	Perl module for character screen handling and windowing
 Name:		perl-%{module}
 Version:	1.44
-Release:	2
+Release:	3
 License:	GPLv2
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{module}/
+Url:		https://metacpan.org/pod/Curses
 Source0:	http://www.cpan.org/modules/by-module/Curses/Curses-%{version}.tar.gz
 BuildRequires:	perl(Test::More)
 BuildRequires:	pkgconfig(ncursesw)
