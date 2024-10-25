@@ -6,7 +6,7 @@
 Summary:	Perl module for character screen handling and windowing
 Name:		perl-%{module}
 Version:	1.45
-Release:	1
+Release:	2
 License:	GPLv2
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/Curses
