@@ -11,6 +11,7 @@ License:	GPLv2
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/Curses
 Source0:	http://www.cpan.org/modules/by-module/Curses/Curses-%{version}.tar.gz
+BuildRequires:	make
 BuildRequires:	perl(Test::More)
 BuildRequires:	pkgconfig(ncursesw)
 BuildRequires:	perl-devel
